@@ -41,5 +41,6 @@ def testBnBandBruteforce(size, matrix=False, printResult=False):
         print('Bruteforce: ', res2, calcSum(matrix, res2[0]))
         for i in matrix:
             print(i)
+        return calcSum(matrix, res2[0])
     else:
         print("BnBandBruteforce Test successfully passed")

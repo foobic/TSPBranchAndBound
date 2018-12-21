@@ -1,8 +1,13 @@
 from lib.BranchAndBound import BranchAndBound
 from lib.bruteforce import bruteforce
+from lib.monteCarlo import monteCarlo
 from math import inf
 from functions import *
 from tests import *
+
+def printMatrix(matrix):
+    for i in matrix:
+        print(i)
 
 # Laba
 matrix = [
@@ -13,9 +18,12 @@ matrix = [
     [16, 4, 7, 16, inf, 3],
     [1, 8, 3, 10, 4, inf],
 ]
+matrix = generateRandomMatrix(6)
+printMatrix(matrix)
 testBnB(6, matrix, True)
-# testBnBandBruteforce(6, matrix, True)
-
+# res = testBnBandBruteforce(6, matrix, True)
+res = 0
+monteCarlo(matrix, res)
 
 # Own matrix
 # matrix = [
